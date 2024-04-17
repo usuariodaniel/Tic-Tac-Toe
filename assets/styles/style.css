@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #212529;
+    --color-square: #2e2e2e;
+    --border-color: #666;
+    --primary-color: #f5eddb;
+    --font-color: #f1f5f9;
+    --win-color: #168b2f;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: "Ubuntu", sans-serif;
+}
+
+header {
+    padding: 2rem 0;
+}
+
+#player1, #player2 {
+    padding: .3rem;
+    margin: .3rem 0 .3rem 0;
+}
+
+.playerName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoPlayer1, .infoPlayer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main {
+    display: block;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 0 1.5rem 2.5rem;
+    position: relative;
+}
+
+#gameBoard {
+    background-color: var(--font-color);
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    max-width: 19rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+#gameBoard span {
+    background-color: var(--color-square);
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+}
+
+#gameBoard span.win {
+    background-color: var(--win-color);
+}
+
+.cursor-pointer {
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    transition: .15s;
+    cursor: pointer;
+}
+
+.cursor-pointer:hover {
+    filter: brightness(1.2);
+}
+
+#themeSwitcher, .insertPlayer {
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: .25rem;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    transition: .15s;
+}
+
+.insertPlayer {
+    margin: .5rem 0 .5rem 0;
+}
+
+
+#themeSwitcher:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
